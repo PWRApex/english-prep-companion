@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider, useAuth } from "@/contexts/AuthContext";
 import Home from "./pages/Home";
 import Auth from "./pages/Auth";
+import ResetPassword from "./pages/ResetPassword";
 import Add from "./pages/Add";
 import Tracks from "./pages/Tracks";
 import Exams from "./pages/Exams";
@@ -37,6 +38,7 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/auth" element={<Auth />} />
+      <Route path="/reset-password" element={<ResetPassword />} />
       <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
       <Route path="/add" element={<ProtectedRoute><Add /></ProtectedRoute>} />
       <Route path="/tracks" element={<ProtectedRoute><Tracks /></ProtectedRoute>} />
